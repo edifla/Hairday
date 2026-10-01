@@ -1,0 +1,266 @@
+.sidebar {
+    position: relative;
+    width: 100%;
+    min-height: calc(100vh - 48px);
+    padding: 82px 80px 56px;
+    background-color: #232225;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.brandMark {
+    position: absolute;
+    top: -10px;
+    left: -12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 139px;
+    height: 56px;
+    margin: 0;
+    padding: 0 24px;
+    border-radius: 0 0 16px 0;
+    background: #302e32;
+    color: #c6a35a;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.brandMark svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+}
+
+.sidebarIntro {
+    max-width: 360px;
+}
+
+.title {
+    margin: 0;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.subinfo {
+    max-width: 320px;
+    margin: 12px 0 0;
+    color: #aaa6ad;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.fieldLabel {
+    color: #d6d2d8;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.appointmentForm {
+    display: grid;
+    gap: 30px;
+    margin-top: 28px;
+}
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 12px;
+}
+
+.formInput {
+    width: 100%;
+    min-width: 0;
+    height: 50px;
+    padding: 11px 14px;
+    border: 1px solid #454248;
+    border-radius: 12px;
+    background-color: #232225;
+    color: #f5f3f5;
+    font: inherit;
+    font-size: 16px;
+}
+
+.formInput:focus-visible {
+    border-color: #c6a35a;
+    outline: 2px solid #c6a35a;
+    outline-offset: 2px;
+}
+
+.formInput::placeholder {
+    color: #858188;
+}
+
+.dateInputWrap,
+.clientInputWrap {
+    position: relative;
+}
+
+.fieldIcon {
+    position: absolute;
+    z-index: 1;
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke: #c6a35a;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
+    pointer-events: none;
+}
+
+.dateIcon,
+.clientIcon {
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+}
+
+.dateChevron {
+    top: 50%;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+}
+
+.datapicker {
+    position: relative;
+    padding-right: 44px;
+    padding-left: 42px;
+    color-scheme: dark;
+}
+
+.datapicker::-webkit-calendar-picker-indicator {
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 44px;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.clientInput {
+    padding-left: 42px;
+}
+
+.timeField {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.timeField legend {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.timePeriods {
+    display: grid;
+    gap: 12px;
+}
+
+.timePeriod {
+    min-width: 0;
+}
+
+.timePeriodLabel {
+    margin: 0 0 10px;
+    color: #d6d2d8;
+    font-size: 16px;
+}
+
+.timeSlots {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.timeSlot {
+    min-width: 0;
+    height: 42px;
+    padding: 0 6px;
+    border: 1px solid #39373b;
+    border-radius: 8px;
+    background: transparent;
+    color: #aaa6ad;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+}
+
+.timeSlot:hover:not(:disabled) {
+    border-color: #c6a35a;
+    color: #f5f3f5;
+}
+
+.timeSlot.isSelected {
+    border-color: #c6a35a;
+    background: #c6a35a;
+    color: #171518;
+}
+
+.timeSlot:disabled {
+    color: #625f65;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.timeSlot:focus-visible {
+    outline: 2px solid #c6a35a;
+    outline-offset: 2px;
+}
+
+.formError {
+    margin: -8px 0 0;
+    color: #f18b84;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.submitButton {
+    min-height: 60px;
+    padding: 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #c6a35a;
+    color: #171518;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.submitButton:hover:not(:disabled) {
+    background: #d6b66f;
+}
+
+.submitButton:disabled {
+    background: #725c2e;
+    color: #26221a;
+    cursor: not-allowed;
+    opacity: 0.58;
+}
+
+.submitButton:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+    .sidebar {
+        min-height: 0;
+        padding: 82px clamp(24px, 15.5vw, 80px) 56px;
+    }
+}

@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    background: #111013;
+    color: #f5f3f5;
+    font-family: var(--font-geist-sans), sans-serif;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+.appShell {
+    display: grid;
+    grid-template-columns: 500px minmax(0, 1fr);
+    gap: 28px;
+    width: min(100%, 1440px);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.appointmentsPanel {
+    min-width: 0;
+    padding: 0 16px;
+}
+
+@media (max-width: 760px) {
+    .appShell {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .appointmentsPanel {
+        padding: 0;
+    }
+}
